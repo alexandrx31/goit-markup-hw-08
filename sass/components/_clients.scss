@@ -1,63 +1,68 @@
 .clients {
   padding-top: 60px;
   padding-bottom: 60px;
-  ul {
+  h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 1.18;
+    text-align: center;
+    letter-spacing: 0.03em;
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
+      font-size: 36px;
+      line-height: 42px;
+    }
+  }
+  .clients-links {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-  }
-  li {
-    width: calc(50% - 15px);
-    @media screen and (min-width: 768px) {
-      width: calc(30% - 15px);
+
+    li {
+      width: calc(50% - 15px);
+
+      &:not(:last-child) {
+        padding-bottom: 30px;
+      }
     }
-    @media screen and (min-width: 1200px) {
-      width: calc(15% - 15px);
+
+    a {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      fill: #afb1b8;
+      height: 90px;
+      border: 1px solid #afb1b8;
+      border-radius: 4px;
+      transition-property: border-color, fill;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover,
+      &:focus {
+        border-color: $accent-color;
+        fill: $accent-color;
+      }
     }
   }
-}
-.clients h2 {
-  margin-bottom: 30px;
-  font-size: 28px;
-  line-height: 1.18;
-  text-align: center;
-  letter-spacing: 0.03em;
-  @media screen and (min-width: 1200px) {
-    margin-bottom: 50px;
-    font-size: 36px;
-    line-height: 42px;
-  }
-}
-
-.clients-links li:not(:last-child) {
-  padding-bottom: 30px;
-}
-
-.clients-links a {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  fill: #afb1b8;
-
-  width: 210px;
-  height: 90px;
-  border: 1px solid #afb1b8;
-  border-radius: 4px;
-  transition-property: border-color, fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover,
-  &:focus {
-    border-color: $accent-color;
-    fill: $accent-color;
-  }
-  @media screen and (min-width: 769px) {
-    width: 226px;
-    height: 90px;
+  @media screen and (min-width: 768px) {
+    .clients-links {
+      li {
+        width: calc(30% - 15px);
+      }
+      a {
+        height: 90px;
+      }
+    }
   }
   @media screen and (min-width: 1200px) {
-    width: 170px;
-    height: 90px;
+    .clients-links {
+      li {
+        width: calc(15% - 15px);
+      }
+      a {
+        height: 90px;
+      }
+    }
   }
 }
