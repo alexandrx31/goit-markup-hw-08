@@ -3,6 +3,7 @@ footer {
   padding-bottom: 60px;
   background-color: $accent-background;
   font-family: $primary-font-family;
+
   .container {
     display: flex;
     flex-direction: column;
@@ -62,6 +63,7 @@ footer {
     flex-direction: column;
     align-items: center;
   }
+
   .social-menu {
     margin-top: 60px;
     margin-bottom: 60px;
@@ -80,6 +82,13 @@ footer {
       background: rgba(255, 255, 255, 0.1);
     }
   }
+  .subscribe {
+    width: 100%;
+
+    input {
+      margin-bottom: 20px;
+    }
+  }
 
   .subscribe p {
     text-align: center;
@@ -92,13 +101,10 @@ footer {
     align-items: center;
     width: 200px;
     height: 50px;
-    margin-left: 12px;
-
     background: #2196f3;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     color: $secondary-title-color;
-
     transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -114,9 +120,10 @@ footer {
   }
 
   .subscribe input {
-    width: 358px;
+    width: 100%;
+    max-width: 450px;
     height: 50px;
-    margin-bottom: 20px;
+    // margin-bottom: 20px;
     padding: 15px 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-sizing: border-box;
@@ -124,6 +131,72 @@ footer {
     border-radius: 4px;
     background: transparent;
     color: $secondary-title-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    .container {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      flex-direction: row;
+    }
+    .social-menu {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+    .subscribe {
+      p {
+        margin-top: 60px;
+      }
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    .container {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+    }
+    .social-menu {
+      margin-right: 93px;
+      p {
+        margin-bottom: 20px;
+      }
+    }
+
+    .brand {
+      margin-right: 70px;
+      text-align: start;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    address {
+      text-align: start;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .subscribe {
+      // width: auto;
+      max-width: 570px;
+      input {
+        margin-bottom: 0px;
+      }
+
+      button {
+        margin-left: 12px;
+      }
+      p {
+        text-align: start;
+        margin-top: 0px;
+      }
+    }
+    form {
+      display: flex;
+      flex-direction: row;
+    }
   }
 
   // }
