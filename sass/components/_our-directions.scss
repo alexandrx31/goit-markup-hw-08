@@ -79,6 +79,22 @@
       margin-bottom: 30px;
     }
   }
+
+  @media screen and (min-width: 1200px) {
+    img {
+      width: 100%;
+    }
+    // padding-bottom: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-between;
+    li {
+      max-width: 370px;
+      width: calc(33.333% - 15px);
+      margin-bottom: 30px;
+    }
+  }
 }
 
 .name-wrapper {
